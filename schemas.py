@@ -12,3 +12,13 @@ class Login(BaseModel) :
 
 class TokenData(BaseModel) :
     id : Optional[str] = None
+
+class Request(BaseModel) : 
+    reciver : int 
+    book : int 
+    content : str
+
+class Book(BaseModel) : 
+    name : str 
+    author : str
+    stopped : Optional[bool] = None

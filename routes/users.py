@@ -40,5 +40,7 @@ def signin(login : OAuth2PasswordRequestForm = Depends() , db : Session = Depend
 
 
 
-
+@router.get("/me") 
+def me(user = Depends(oauth2.get_current_user)) : 
+    return user.id
 
